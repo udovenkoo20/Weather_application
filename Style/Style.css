@@ -99,10 +99,11 @@ li {
 hr {
   margin: 0 auto;
 }
-
-.all {
+.authorcont {
   max-width: 800px;
   margin: 50px auto;
+}
+.all {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 10px;

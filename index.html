@@ -21,150 +21,153 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="all">
-      <form id="search-form">
-        <div class="row">
-          <div class="col-8">
-            <input
-              type="text"
-              id="city"
-              placeholder="Enter your city"
-              required
-              class="form-control"
-            />
-          </div>
-          <div class="col-2">
-            <input type="submit" value="Search" id="button" />
-          </div>
-          <div class="col-2">
-            <input type="submit" value="Current" id="currentL" />
+    <div class="container">
+      <div class="authorcont">
+        <div class="all">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  id="city"
+                  placeholder="Enter your city"
+                  required
+                  class="form-control"
+                />
+              </div>
+              <div class="col-2">
+                <input type="submit" value="Search" id="button" />
+              </div>
+              <div class="col-2">
+                <input type="submit" value="Current" id="currentL" />
+              </div>
+            </div>
+          </form>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-5">
+                <span class="city"> Kyiv </span>
+                <hr id="startingLine" />
+                <span class="today"> Wed 27 </span>
+
+                <br />
+                <span class="tdegree"> 27°C </span>
+                <span class="ticon"> ☁️ </span>
+
+                <a href="#" id="celsius-link">°C</a>
+                <a href="#" id="fahrenheit-link">°F</a>
+                <br />
+                <span class="wind">
+                  Humidity:
+                  <span id="humidity"> 0,1</span>
+                  <span> % </span>
+                  <br />
+                  Wind:
+                  <span id="wind"> 3</span>
+                  <span> km/h </span>
+                </span>
+              </div>
+
+              <div class="col-sm-7">
+                <ul>
+                  <li>
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col">
+                          <span class="day"> Thu </span>
+                          <hr />
+                          <span class="date"> 28/07 </span>
+                        </div>
+                        <div class="col">
+                          <span class="icon"> ☀️ </span>
+                        </div>
+                        <div class="col">
+                          <span class="degree">30 °C </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col">
+                          <span class="day"> Fri </span>
+                          <hr />
+                          <span class="date">29/07</span>
+                        </div>
+                        <div class="col">
+                          <span class="icon"> 🌨️ </span>
+                        </div>
+                        <div class="col">
+                          <span class="degree"> 28 °C</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col">
+                          <span class="day"> Sat </span>
+                          <hr />
+                          <span class="date"> 30/07 </span>
+                        </div>
+                        <div class="col">
+                          <span class="icon"> 🌦️</span>
+                        </div>
+                        <div class="col">
+                          <span class="degree"> 23 °C </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col">
+                          <span class="day"> Sun </span>
+                          <hr />
+                          <span class="date"> 31/07 </span>
+                        </div>
+                        <div class="col">
+                          <span class="icon"> 🌤️ </span>
+                        </div>
+                        <div class="col">
+                          <span class="degree"> 27 °C</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="container text-center">
+                      <div class="row">
+                        <div class="col">
+                          <span class="day"> Mon </span>
+                          <hr />
+                          <span class="date"> 01/08 </span>
+                        </div>
+                        <div class="col">
+                          <span class="icon"> ⛅ </span>
+                        </div>
+                        <div class="col">
+                          <span class="degree">29 °C</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </form>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-5">
-            <span class="city"> Kyiv </span>
-            <hr id="startingLine" />
-            <span class="today"> Wed 27 </span>
-
-            <br />
-            <span class="tdegree"> 27°C </span>
-            <span class="ticon"> ☁️ </span>
-
-            <a href="#" id="celsius-link">°C</a>
-            <a href="#" id="fahrenheit-link">°F</a>
-            <br />
-            <span class="wind">
-              Humidity:
-              <span id="humidity"> 0,1</span>
-              <span> % </span>
-              <br />
-              Wind:
-              <span id="wind"> 3</span>
-              <span> km/h </span>
-            </span>
-          </div>
-
-          <div class="col-sm-7">
-            <ul>
-              <li>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <span class="day"> Thu </span>
-                      <hr />
-                      <span class="date"> 28/07 </span>
-                    </div>
-                    <div class="col">
-                      <span class="icon"> ☀️ </span>
-                    </div>
-                    <div class="col">
-                      <span class="degree">30 °C </span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <span class="day"> Fri </span>
-                      <hr />
-                      <span class="date">29/07</span>
-                    </div>
-                    <div class="col">
-                      <span class="icon"> 🌨️ </span>
-                    </div>
-                    <div class="col">
-                      <span class="degree"> 28 °C</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <span class="day"> Sat </span>
-                      <hr />
-                      <span class="date"> 30/07 </span>
-                    </div>
-                    <div class="col">
-                      <span class="icon"> 🌦️</span>
-                    </div>
-                    <div class="col">
-                      <span class="degree"> 23 °C </span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <span class="day"> Sun </span>
-                      <hr />
-                      <span class="date"> 31/07 </span>
-                    </div>
-                    <div class="col">
-                      <span class="icon"> 🌤️ </span>
-                    </div>
-                    <div class="col">
-                      <span class="degree"> 27 °C</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <span class="day"> Mon </span>
-                      <hr />
-                      <span class="date"> 01/08 </span>
-                    </div>
-                    <div class="col">
-                      <span class="icon"> ⛅ </span>
-                    </div>
-                    <div class="col">
-                      <span class="degree">29 °C</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <p class="author">
+          <a href="https://github.com/udovenkoo20/Weather_application"
+            >Open-source code,</a
+          >
+          by Olha Udovenko
+        </p>
       </div>
-      <p class="author">
-        <a href="https://github.com/udovenkoo20/Weather_application"
-          >Open-source code,</a
-        >
-        by Olha Udovenko
-      </p>
     </div>
-
     <script src="Style/alert.js"></script>
   </body>
 </html>
