@@ -32,13 +32,16 @@ function displayWeather(response) {
   wet.innerHTML = humidity;
   windy.innerHTML = wind;
 }
+function searchCity(city) {
+  let apiKey = "8658c7c07f108f7322318434c640096a";
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
+  axios.get(url).then(displayWeather);
+}
 
 function newcity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#city");
-  let apiKey = "8658c7c07f108f7322318434c640096a";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity.value}&appid=${apiKey}&&units=metric`;
-  axios.get(url).then(displayWeather);
+  searchCity(inputCity.value);
   event.target.reset();
 }
 
@@ -60,3 +63,5 @@ function currentLocation(event) {
 }
 let currentLoc = document.querySelector("#currentL");
 currentLoc.addEventListener("click", currentLocation);
+
+searchCity("Kyiv");
