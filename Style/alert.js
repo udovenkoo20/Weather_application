@@ -27,10 +27,13 @@ function displayWeather(response) {
   city.innerHTML = `${location}|`;
   let wet = document.querySelector("#humidity");
   let windy = document.querySelector("#wind");
+  let weatherDescription = document.querySelector("#description");
   let humidity = response.data.main.humidity;
   let wind = response.data.wind.speed;
+  let description = response.data.weather[0].description;
   wet.innerHTML = humidity;
   windy.innerHTML = wind;
+  weatherDescription.innerHTML = description;
 }
 function searchCity(city) {
   let apiKey = "8658c7c07f108f7322318434c640096a";

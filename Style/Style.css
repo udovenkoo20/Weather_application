@@ -116,6 +116,19 @@ hr {
   margin-top: 20px;
 }
 
+#description {
+  padding: 0;
+  line-height: 10px;
+  border: none;
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 12px;
+  padding: 0;
+  margin-top: 15px;
+  font-weight: 300;
+  color: #62697f;
+}
+
 .wind {
   list-style: none;
   color: #62697f;
@@ -132,11 +145,17 @@ hr {
 }
 
 #celsius-link {
+  position: relative;
+  bottom: 30px;
   font-size: 12px;
+  font-weight: 300;
 }
 
 #fahrenheit-link {
+  position: relative;
+  bottom: 30px;
   font-size: 12px;
+  font-weight: 300;
 }
 
 #author {
