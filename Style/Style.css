@@ -73,26 +73,26 @@ li {
 }
 
 .today {
-  color: #7a808f;
+  color: #62697f;
   font-size: 14px;
+  
 }
 .city {
-  color: black;
-  font-size: 26px;
-  font-weight: 700;
+  color: #62697f;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 50px;
+  
 }
 
 .tdegree {
   position: relative;
-  bottom: -20px;
-
   color: #0f0f10;
   font-size: 52px;
-  font-weight: 700;
+  font-weight: 500;
 }
 .ticon {
   position: relative;
-  bottom: -20px;
   font-size: 52px;
 }
 
@@ -110,11 +110,19 @@ hr {
 }
 
 .wind {
-  position: relative;
-  top: 240px;
-  margin-top: 100%;
-  text-align: left;
+  list-style: none;
+  color: #62697f;
+  font-size: 12px;
+  padding: 0;
+  margin-top: 15px;
+
 }
+.addition {
+  padding: 0;
+  line-height: 10px;
+  border: none;
+  text-align: left;
+  
 
 #celsius-link {
   font-size: 12px;
@@ -122,10 +130,6 @@ hr {
 
 #fahrenheit-link {
   font-size: 12px;
-}
-#startingLine {
-  max-width: 45%;
-  margin: 0;
 }
 
 .author {

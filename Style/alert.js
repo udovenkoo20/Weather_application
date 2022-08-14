@@ -1,5 +1,13 @@
 function currentdate(date) {
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let currentDay = days[date.getDay()];
   let currentHour = date.getHours();
   let currentMinutes = date.getMinutes();
@@ -16,7 +24,7 @@ function displayWeather(response) {
   forecast.innerHTML = `${temperature}`;
   let city = document.querySelector(".city");
   let location = response.data.name;
-  city.innerHTML = location;
+  city.innerHTML = `${location}|`;
   let wet = document.querySelector("#humidity");
   let windy = document.querySelector("#wind");
   let humidity = response.data.main.humidity;
