@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Forecast</title>
+    <link rel="stylesheet" href="style/Style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="all">
+      <form id="search-form">
+        <div class="row">
+          <div class="col-8">
+            <input
+              type="text"
+              id="city"
+              placeholder="Enter your city"
+              required
+              class="form-control"
+            />
+          </div>
+          <div class="col-2">
+            <input type="submit" value="Search" id="button" />
+          </div>
+          <div class="col-2">
+            <input type="submit" value="Current" id="currentL" />
+          </div>
+        </div>
+      </form>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <span class="city"> Kyiv </span>
+            <hr id="startingLine" />
+            <span class="today"> Wed 27 </span>
+
+            <br />
+            <span class="tdegree"> 27°C </span>
+            <span class="ticon"> ☁️ </span>
+
+            <a href="#" id="celsius-link">°C</a>
+            <a href="#" id="fahrenheit-link">°F</a>
+            <br />
+            <span class="wind">
+              Humidity:
+              <span id="humidity"> 0,1</span>
+              <span> % </span>
+              <br />
+              Wind:
+              <span id="wind"> 3</span>
+              <span> km/h </span>
+            </span>
+          </div>
+
+          <div class="col-sm-7">
+            <ul>
+              <li>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <span class="day"> Thu </span>
+                      <hr />
+                      <span class="date"> 28/07 </span>
+                    </div>
+                    <div class="col">
+                      <span class="icon"> ☀️ </span>
+                    </div>
+                    <div class="col">
+                      <span class="degree">30 °C </span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <span class="day"> Fri </span>
+                      <hr />
+                      <span class="date">29/07</span>
+                    </div>
+                    <div class="col">
+                      <span class="icon"> 🌨️ </span>
+                    </div>
+                    <div class="col">
+                      <span class="degree"> 28 °C</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <span class="day"> Sat </span>
+                      <hr />
+                      <span class="date"> 30/07 </span>
+                    </div>
+                    <div class="col">
+                      <span class="icon"> 🌦️</span>
+                    </div>
+                    <div class="col">
+                      <span class="degree"> 23 °C </span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <span class="day"> Sun </span>
+                      <hr />
+                      <span class="date"> 31/07 </span>
+                    </div>
+                    <div class="col">
+                      <span class="icon"> 🌤️ </span>
+                    </div>
+                    <div class="col">
+                      <span class="degree"> 27 °C</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col">
+                      <span class="day"> Mon </span>
+                      <hr />
+                      <span class="date"> 01/08 </span>
+                    </div>
+                    <div class="col">
+                      <span class="icon"> ⛅ </span>
+                    </div>
+                    <div class="col">
+                      <span class="degree">29 °C</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Style/alert.js"></script>
+  </body>
+</html>

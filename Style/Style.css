@@ -1,0 +1,128 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+input {
+  border: 0.5px #c6c9d1 solid;
+  width: 100%;
+  padding: 5px 0;
+  margin-bottom: 50px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+#button {
+  border-radius: 0%;
+  padding: 6px 15px;
+  color: white;
+  background-color: #1ab2a8;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#currentL {
+  border-radius: 0%;
+  padding: 6px 15px;
+  color: white;
+  background-color: #00a6ed;
+  border: none;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+}
+.container {
+  padding: 0;
+}
+.day {
+  font-size: 22px;
+  font-weight: bold;
+  color: #62697b;
+}
+.date {
+  color: #939aa9;
+  font-weight: 600;
+}
+
+.icon {
+  position: relative;
+  bottom: 2px;
+  display: block;
+  font-size: 50px;
+}
+
+.degree {
+  position: relative;
+  bottom: -15px;
+  color: #5a6275;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+li {
+  border: 0.5px #c6c9d1 solid;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.today {
+  color: #7a808f;
+  font-size: 14px;
+}
+.city {
+  color: black;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.tdegree {
+  position: relative;
+  bottom: -20px;
+
+  color: #0f0f10;
+  font-size: 52px;
+  font-weight: 700;
+}
+.ticon {
+  position: relative;
+  bottom: -20px;
+  font-size: 52px;
+}
+
+hr {
+  margin: 0 auto;
+}
+
+.all {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.wind {
+  position: relative;
+  top: 240px;
+  margin-top: 100%;
+  text-align: left;
+}
+
+#celsius-link {
+  font-size: 12px;
+}
+
+#fahrenheit-link {
+  font-size: 12px;
+}
+#startingLine {
+  max-width: 45%;
+  margin: 0;
+}
