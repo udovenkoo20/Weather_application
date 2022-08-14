@@ -43,12 +43,12 @@ ul {
 }
 .day {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 500;
   color: #62697b;
 }
 .date {
   color: #939aa9;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .icon {
@@ -63,7 +63,7 @@ ul {
   bottom: -15px;
   color: #5a6275;
   font-size: 26px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 li {
@@ -74,23 +74,22 @@ li {
 
 .today {
   color: #62697f;
-  font-size: 14px;
-  
+  font-size: 18px;
+  font-weight: 300;
 }
 .city {
   color: #62697f;
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 50px;
-  
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .tdegree {
   position: relative;
   color: #0f0f10;
   font-size: 52px;
-  font-weight: 500;
+  font-weight: 300;
 }
+
 .ticon {
   position: relative;
   font-size: 52px;
@@ -99,14 +98,22 @@ li {
 hr {
   margin: 0 auto;
 }
+
 .authorcont {
   max-width: 800px;
   margin: 50px auto;
 }
+
 .all {
   background-color: #f9f9f9;
   padding: 30px;
   border-radius: 10px;
+  box-shadow: 7px 5px 11px rgba(225, 224, 224, 0.5);
+  color: #cdcdcd;
+}
+
+.overview {
+  margin-top: 20px;
 }
 
 .wind {
@@ -115,14 +122,14 @@ hr {
   font-size: 12px;
   padding: 0;
   margin-top: 15px;
-
+  font-weight: 300;
 }
 .addition {
   padding: 0;
   line-height: 10px;
   border: none;
   text-align: left;
-  
+}
 
 #celsius-link {
   font-size: 12px;
@@ -132,7 +139,7 @@ hr {
   font-size: 12px;
 }
 
-.author {
+#author {
   font-size: 12px;
-  margin-bottom: 0;
+  font-weight: 300;
 }
