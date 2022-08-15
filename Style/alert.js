@@ -1,4 +1,4 @@
-function currentdate(date) {
+function formatDate(timestamp) {
   let days = [
     "Sunday",
     "Monday",
@@ -8,15 +8,18 @@ function currentdate(date) {
     "Friday",
     "Saturday",
   ];
-  let currentDay = days[date.getDay()];
-  let currentHour = date.getHours();
-  let currentMinutes = date.getMinutes();
-  let formattedate = `${currentDay}, ${currentHour}:${currentMinutes}`;
-  return formattedate;
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
-let dateNow = currentdate(new Date());
-let today = document.querySelector(".today");
-today.innerHTML = dateNow;
 
 function displayWeather(response) {
   let forecast = document.querySelector(".tdegree");
@@ -28,12 +31,14 @@ function displayWeather(response) {
   let wet = document.querySelector("#humidity");
   let windy = document.querySelector("#wind");
   let weatherDescription = document.querySelector("#description");
+  let dateElement = document.querySelector(".today");
   let humidity = response.data.main.humidity;
   let wind = response.data.wind.speed;
   let description = response.data.weather[0].description;
   wet.innerHTML = humidity;
   windy.innerHTML = wind;
   weatherDescription.innerHTML = description;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 function searchCity(city) {
   let apiKey = "8658c7c07f108f7322318434c640096a";
