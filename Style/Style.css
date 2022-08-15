@@ -90,11 +90,25 @@ li {
   font-weight: 300;
 }
 
-.ticon {
+#ticon {
+  width: 70px;
   position: relative;
-  font-size: 52px;
+  bottom: 20px;
 }
 
+#celsius-link {
+  position: relative;
+  bottom: 30px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#fahrenheit-link {
+  position: relative;
+  bottom: 30px;
+  font-size: 12px;
+  font-weight: 300;
+}
 hr {
   margin: 0 auto;
 }
@@ -105,11 +119,10 @@ hr {
 }
 
 .all {
-  background-color: #f9f9f9;
+  background-color: #d1e9f0;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 7px 5px 11px rgba(225, 224, 224, 0.5);
-  color: #cdcdcd;
 }
 
 .overview {
@@ -142,20 +155,6 @@ hr {
   line-height: 10px;
   border: none;
   text-align: left;
-}
-
-#celsius-link {
-  position: relative;
-  bottom: 30px;
-  font-size: 12px;
-  font-weight: 300;
-}
-
-#fahrenheit-link {
-  position: relative;
-  bottom: 30px;
-  font-size: 12px;
-  font-weight: 300;
 }
 
 #author {
