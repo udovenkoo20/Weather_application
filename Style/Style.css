@@ -95,19 +95,28 @@ li {
   position: relative;
   bottom: 20px;
 }
+.active {
+  color: black;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.active :hover {
+  text-decoration: none;
+}
 
 #celsius-link {
   position: relative;
-  bottom: 30px;
-  font-size: 12px;
-  font-weight: 300;
+  bottom: 26px;
+  font-size: 15px;
+  text-decoration: none;
 }
 
 #fahrenheit-link {
   position: relative;
-  bottom: 30px;
-  font-size: 12px;
-  font-weight: 300;
+  bottom: 26px;
+  font-size: 15px;
+  text-decoration: none;
 }
 hr {
   margin: 0 auto;

@@ -34,6 +34,8 @@ function displayWeather(response) {
   let wind = response.data.wind.speed;
   let iconElement = document.querySelector("#ticon");
   let description = response.data.weather[0].description;
+
+  celsiusTemperature = response.data.main.temp;
   forecast.innerHTML = `${temperature}`;
   wet.innerHTML = humidity;
   windy.innerHTML = wind;
@@ -44,6 +46,7 @@ function displayWeather(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchCity(city) {
   let apiKey = "8658c7c07f108f7322318434c640096a";
@@ -74,7 +77,33 @@ function currentLocation(event) {
   curCity.innerHTML =
     navigator.geolocation.getCurrentPosition(retrievePosition);
 }
+
+function showfahrenheitLink(event) {
+  event.preventDefault();
+  let degree = document.querySelector(".tdegree");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheit = (celsiusTemperature * 9) / 5 + 32;
+  degree.innerHTML = Math.round(fahrenheit);
+}
+
+function showcelsiusLink(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let degree = document.querySelector(".tdegree");
+  degree.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let currentLoc = document.querySelector("#currentL");
 currentLoc.addEventListener("click", currentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showfahrenheitLink);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showcelsiusLink);
 
 searchCity("Kyiv");
