@@ -38,10 +38,11 @@ form {
 .container {
   padding: 0;
 }
+
 .day {
   position: relative;
   font-size: 22px;
-  bottom: -30px;
+  bottom: -20px;
   font-weight: 400;
   color: #62697b;
 }
@@ -52,7 +53,7 @@ form {
 
 .degree {
   position: relative;
-  bottom: -30px;
+  bottom: -20px;
   color: #5a6275;
   font-size: 24px;
   font-weight: 400;
@@ -60,12 +61,12 @@ form {
 
 .weekdays {
   border: 0.5px #c6c9d1 solid;
-  padding: 5px;
+
   margin: 5px 0;
 }
 
 #forecast :hover {
-  background-color: #b2dcda;
+  background-color: #bbdded;
 }
 
 .today {
@@ -75,7 +76,7 @@ form {
 }
 .city {
   color: #62697f;
-  font-size: 18px;
+  font-size: 32px;
   font-weight: 300;
 }
 #dash {
@@ -90,7 +91,7 @@ form {
 }
 
 #ticon {
-  width: 70px;
+  width: 120px;
   position: relative;
   bottom: 20px;
 }
@@ -127,14 +128,14 @@ hr {
 }
 
 .all {
-  background-color: #e2eff3;
+  background-color: #d2f0fa;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 7px 5px 11px rgba(225, 224, 224, 0.5);
 }
 
 .overview {
-  margin-top: 20px;
+  margin-top: -40px;
 }
 
 #description {
