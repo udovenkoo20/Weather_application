@@ -52,7 +52,7 @@ function displayForecast(response) {
        </span>
      </div>
      <div class="col">
-       <span class="degree"> ${Math.round(forecastDay.temp.day)} °C </span>
+       <span class="degree"> ${Math.round(forecastDay.temp.day)} ° </span>
      </div>
    </div>
    `;
@@ -64,8 +64,12 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "8658c7c07f108f7322318434c640096a";
-  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric
-`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=`;
+  if (celsiusLink.classList.contains("active")) {
+    apiURL = apiURL + "metric";
+  } else {
+    apiURL = apiURL + "imperial";
+  }
   axios.get(apiURL).then(displayForecast);
 }
 
@@ -87,7 +91,7 @@ function displayWeather(response) {
   forecast.innerHTML = `${temperature}`;
   wet.innerHTML = humidity;
   windy.innerHTML = wind;
-  city.innerHTML = `${location}|`;
+  city.innerHTML = `${location}`;
   weatherDescription.innerHTML = description;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
@@ -98,16 +102,17 @@ function displayWeather(response) {
   getForecast(response.data.coord);
 }
 
-function searchCity(city) {
+function searchCity(city, units) {
   let apiKey = "8658c7c07f108f7322318434c640096a";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=${units}
+  `;
   axios.get(url).then(displayWeather);
 }
 
 function newcity(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#city");
-  searchCity(inputCity.value);
+  searchCity(inputCity.value, "metric");
   event.target.reset();
 }
 
@@ -133,8 +138,11 @@ function showfahrenheitLink(event) {
   let degree = document.querySelector(".tdegree");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheit = (celsiusTemperature * 9) / 5 + 32;
-  degree.innerHTML = Math.round(fahrenheit);
+  let city = document.querySelector(".city");
+  city = city.textContent || city.innerText;
+  searchCity(city, "imperial");
+  let speed = document.querySelector("#speed");
+  speed.innerHTML = "m/h";
 }
 
 function showcelsiusLink(event) {
@@ -142,7 +150,11 @@ function showcelsiusLink(event) {
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let degree = document.querySelector(".tdegree");
-  degree.innerHTML = Math.round(celsiusTemperature);
+  let city = document.querySelector(".city");
+  city = city.textContent || city.innerText;
+  searchCity(city, "metric");
+  let speed = document.querySelector("#speed");
+  speed.innerHTML = "m/s";
 }
 
 let celsiusTemperature = null;
@@ -156,4 +168,4 @@ fahrenheitLink.addEventListener("click", showfahrenheitLink);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showcelsiusLink);
 
-searchCity("Kyiv");
+searchCity("Kyiv", "metric");

@@ -78,6 +78,9 @@ form {
   font-size: 18px;
   font-weight: 300;
 }
+#dash {
+  color: #62697f;
+}
 
 .tdegree {
   position: relative;
@@ -124,7 +127,7 @@ hr {
 }
 
 .all {
-  background-color: #d1e9f0;
+  background-color: #e2eff3;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 7px 5px 11px rgba(225, 224, 224, 0.5);
