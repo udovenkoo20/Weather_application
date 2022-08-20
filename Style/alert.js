@@ -21,6 +21,32 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="row">
+     <div class="col">
+       <span class="day"> ${day} </span>
+       <hr />
+       <span class="date"> 28/07 </span>
+     </div>
+     <div class="col">
+       <span class="icon"> ☀️ </span>
+     </div>
+     <div class="col">
+       <span class="degree">30 °C </span>
+     </div>
+   </div>
+   `;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeather(response) {
   let forecast = document.querySelector(".tdegree");
   let temperature = Math.round(response.data.main.temp);
@@ -107,3 +133,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showcelsiusLink);
 
 searchCity("Kyiv");
+displayForecast();

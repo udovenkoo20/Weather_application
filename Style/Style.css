@@ -35,9 +35,6 @@ form {
   margin-bottom: 50px;
 }
 
-ul {
-  list-style: none;
-}
 .container {
   padding: 0;
 }
@@ -66,7 +63,7 @@ ul {
   font-weight: 500;
 }
 
-li {
+#forecast {
   border: 0.5px #c6c9d1 solid;
   padding: 5px;
   margin: 5px 0;
